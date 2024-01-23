@@ -117,7 +117,7 @@ img {
   content: '';
   position: absolute;
   left: 0;
-  bottom: -1px;
+  bottom: -17px;
   height: 4px;
   width: 100%;
   border-radius: 2px;
@@ -992,9 +992,12 @@ img {
   }
 
   .footer-content {
+    width: 428px;
     display: flex;
     flex-wrap: wrap;
     gap: 72px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .footer-details,
@@ -1020,6 +1023,32 @@ img {
     justify-content: space-evenly;
     align-content: space-evenly;
   }
+
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .cards-li {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cards-img {
+    width: 100%;
+  }
+
+  .portfolio-ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24;
+    margin-bottom: 48px;
+  }
+
+  .portfolio-li {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1044,6 +1073,19 @@ img {
       ),
       url(../images/people-office-sm.jpg);
   }
+
+  .portfolio {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .cards-li {
+    width: 100%;
+  }
+
+  .portfolio-ul {
+    justify-content: flex-start;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1157px) {
@@ -1063,7 +1105,6 @@ img {
 
   .container {
     width: 768px;
-    border: orange solid 1px;
   }
 
   .navigation .logo {
@@ -1148,34 +1189,65 @@ img {
 
   .footer-content {
     width: 768px;
-    margin-left: auto;
-    margin-right: auto;
+    display: flex;
+    align-items: flex-start;
     padding: 0 90px 0 90px;
-    flex-wrap: wrap;
-    border: solid blue 1px;
-    justify-content: flex-start;
-    left: 0;
+    gap: 0;
   }
 
-  .footer-content div {
-    width: 264px;
-    border: solid red 1px;
+  .footer-details {
+    width: 50%;
+    text-align: left;
+  }
+
+  .footer-text {
+    text-align: left;
+    margin: 0;
+  }
+
+  .social {
+    width: 50%;
+  }
+
+  .social-text,
+  .footer-social-icons,
+  .subscribe-text {
+    text-align: left;
+    justify-content: left;
   }
 
   .subscribe {
-    border: solid yellow 1px;
+    width: 100%;
+    margin-top: 72px;
+    flex-grow: 1;
   }
 
   .subscribe-form {
     display: flex;
-    flex-wrap: nowrap;
-    margin: 0;
-    padding: 0;
+    flex-wrap: wrap;
+    justify-content: flex-start;
   }
 
-  .subscribe .subs-input {
+  .subscribe .subscribe-label {
     width: 298px;
     height: 40px;
+  }
+
+  .subs-send {
+    align-items: left;
+    margin: 0;
+  }
+
+  .cards-li {
+    flex-basis: calc(100% / 2 - 30px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: 0;
+  }
+
+  .portfolio-ul {
+    justify-content: center;
   }
 }
 
@@ -1228,5 +1300,26 @@ img {
 
   .team-ul {
     width: 100%;
+  }
+
+  .footer-content {
+    width: 1158px;
+  }
+
+  .social-text,
+  .footer-social-icons,
+  .subscribe-text,
+  .footer-details {
+    text-align: left;
+    justify-content: left;
+  }
+
+  .footer-text {
+    text-align: left;
+    margin: 0;
+  }
+
+  .subscribe .subscribe-label {
+    width: 264px;
   }
 }
